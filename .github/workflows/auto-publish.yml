@@ -24,7 +24,7 @@ jobs:
       matrix:
         include:
           - source: specs/log.bs
-            destination: ../log.html
+            destination: ../docs/log.html
 
     
     steps:
@@ -34,7 +34,7 @@ jobs:
           TOOLCHAIN: bikeshed
           SOURCE: ${{ matrix.source }}
           DESTINATION: ${{ matrix.destination }}
-          GH_PAGES_BRANCH: gh-pages
+          GH_PAGES_BRANCH: main
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
