@@ -8,11 +8,25 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+
+
+
   
 jobs:
   main:
     name: Build and Validate
     runs-on: ubuntu-20.04
+
+    permissions:
+      contents: write
+    strategy:
+      max-parallel: 1
+      matrix:
+        include:
+          - source: specs/log.bs
+            destination: log.html
+
+    
     steps:
       - uses: actions/checkout@v4
       - uses: w3c/spec-prod@v2
