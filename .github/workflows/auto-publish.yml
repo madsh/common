@@ -24,7 +24,7 @@ jobs:
       matrix:
         include:
           - source: specs/log.bs
-            destination: log.html
+            destination: ../log.html
 
     
     steps:
