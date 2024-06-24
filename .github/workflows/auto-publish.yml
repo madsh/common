@@ -14,7 +14,7 @@ on:
   
 jobs:
   main:
-    name: Build and Validate
+    name: Build, Validate and Deploy
     runs-on: ubuntu-20.04
 
     permissions:
@@ -34,6 +34,8 @@ jobs:
           TOOLCHAIN: bikeshed
           SOURCE: ${{ matrix.source }}
           DESTINATION: ${{ matrix.destination }}
+          GH_PAGES_BRANCH: gh-pages
+
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
