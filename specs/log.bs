@@ -1,0 +1,83 @@
+<pre class='metadata'>
+Title: Draft 1.0.0 XXX Auditlog requirements
+Status: LD
+URL: https://confluence.XXXX/display/KITA
+Editor Term: Redaktør, Redaktører 
+Editor: madsh@example.com
+Abstract: Dette dokumenter beskriver krav til logning af data- og sikkerheds-relaterede handlinger. 
+Boilerplate: copyright no, abstract no, conformance no
+Shortname: xxx-req-log
+Revision: 1
+Date: 2023-03-01
+Max ToC Depth: 3
+Markup Shorthands: markdown yes
+Repository: https://devops.inkit.local/XXX/XXX/_git/specs
+Logo: W3C
+</pre>
+
+
+<h2 class=no-num>Indledning</h2>
+Formålene med kravene er primært at understøtte "princippet om forvaltningsegnet" og "sikkerhed by default"
+
+<h3 class=no-num> Målgruppe og anvendelse</h3> 
+Henvisning skrives som AUDITLOG-1. 
+Du kan linke til URL#ID
+
+<h3 class=no-num> Godkendelse og anbefalingsgrad</h3>
+
+
+
+<h3 class=no-num>Sikkerhed</h3>
+Risiko for sagsbehandleres sikkerhed... hvem har afgjort min sag. 
+
+<h3 class=no-num>Persondata</h3>
+Logs er persondata.
+
+<h3 class=no-num>Forvaltningsegnethed</h3>
+
+<h3 class=no-num>Overholdelse</h3>
+
+Log og logs...
+
+Kravene i dette dokument er udtrykt som en kombination af antagelser (eng. assertions) og en række begreber fra [[RFC2119]]. Følgende ord har en specifik betydning: "SKAL" (eng. MUST, REQUIRED, SHALL) et absolut krav, "SKAL IKKE" (eng. MUST NOT) er et absolut forbud, "BØR" (eng. SHOULD, RECOMMENDED) og "BØR IKKE" betyder at afvigelser skal begrundes og dokumenteres, "KAN" (eng. MAY, OPTIONAL) betyder at systemer kan vælge at implementere denne funktion, og SKAL tage højde for at andre systemer implementere denne funktion. 
+
+> I dette dokument findes krav kun under nummerede afsnit. Afsnit der er markeret "NOTE" eller "EKSEMPEL" er ikke normative/krav-sættende. Afsnit markeret med "ANTAGELSE" er målrettet personer der har til opgave at teste om et krav er opfyldt. Bemærk at overholdelsen af antagelser ikke alene kan være et argument for at et krav er opfyldt fyldestgørende. 
+
+
+
+
+
+
+
+
+NOTE: Krav til it-systemers opførsel 
+
+# Systemer skal afvise forsøg på relevante handlinger hvis auditlog ikke kan sikres. # {#blocking}
+
+# Systemer skal registre adgangskontrol og anvendte identiteter i auditlogs.
+
+# Systemer skal opbevare auditlogs og en kopi bør løbende overføres til koncernens centrale automatiske overvågning.
+
+# Systemer bør registrere hvilke dele af datasamlinger der behandles i auditlogs og særligt skal sager kunne identificeres effektivt. 
+
+# Systemer skal registrere hvilke personer der behandles oplysninger om (datasubjekter) i auditlogs. 
+
+
+NOTE:  Krav til indhold af it-systemers auditlog
+
+# Brugeridentiteter der registreres i auditlogs skal være entydige.
+
+# Datoer og tidspunkter i logs skal være entydige og standardiserede.
+
+# Auditlog skal indeholde oplysninger om hvilke datapunkter der ændres ved databehandling og bør indeholde datapunkters værdier før og efter handlingen. 
+
+# Auditlog skal indeholde oplysninger der gør det muligt at sammenstille log fra flere systemer der er registreret som følge af den samme brugerhandling.  
+
+NOTE:  Krav til dokumentation af it-systemer
+
+# Leverandører bør anvende foretrukne termer ved beskrivelse af databehandling, adgangskontrol og logning. 
+
+# Leverandører skal levere og vedligeholde dokumentation af hvilke data der udgør auditloggen for et it-system. 
+
+# Den dataansvarlige myndighed skal journalisere beslutninger om (at deles om ansvaret for auditlog mellem it-systemer, opbevaringstid) og beslutninger (sagsnumre?) bør fremgå af dokumentationen af it-systemet.
+
