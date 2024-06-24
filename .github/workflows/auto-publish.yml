@@ -34,7 +34,7 @@ jobs:
           TOOLCHAIN: bikeshed
           SOURCE: ${{ matrix.source }}
           DESTINATION: ${{ matrix.destination }}
-          GH_PAGES_BRANCH: main
+          GH_PAGES_BRANCH: pages
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
